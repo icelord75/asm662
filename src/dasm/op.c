@@ -726,7 +726,7 @@ int dasmfunc_20(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     r0");
+		sprintf(buf, "TBR     r0");
 		D->pc += 2;
 		return 2;
 	}
@@ -1142,7 +1142,7 @@ int dasmfunc_21(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     r1");
+		sprintf(buf, "TBR     r1");
 		D->pc += 2;
 		return 2;
 	}
@@ -1558,7 +1558,7 @@ int dasmfunc_22(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     r2");
+		sprintf(buf, "TBR     r2");
 		D->pc += 2;
 		return 2;
 	}
@@ -1974,7 +1974,7 @@ int dasmfunc_23(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     r3");
+		sprintf(buf, "TBR     r3");
 		D->pc += 2;
 		return 2;
 	}
@@ -2390,7 +2390,7 @@ int dasmfunc_24(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     r4");
+		sprintf(buf, "TBR     r4");
 		D->pc += 2;
 		return 2;
 	}
@@ -2806,7 +2806,7 @@ int dasmfunc_25(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     r5");
+		sprintf(buf, "TBR     r5");
 		D->pc += 2;
 		return 2;
 	}
@@ -3222,7 +3222,7 @@ int dasmfunc_26(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     r6");
+		sprintf(buf, "TBR     r6");
 		D->pc += 2;
 		return 2;
 	}
@@ -3638,7 +3638,7 @@ int dasmfunc_27(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     r7");
+		sprintf(buf, "TBR     r7");
 		D->pc += 2;
 		return 2;
 	}
@@ -8124,7 +8124,7 @@ int dasmfunc_a2(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     PSWH");
+		sprintf(buf, "TBR     PSWH");
 		D->pc += 2;
 		return 2;
 	}
@@ -8590,7 +8590,7 @@ int dasmfunc_a3(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     PSWL");
+		sprintf(buf, "TBR     PSWL");
 		D->pc += 2;
 		return 2;
 	}
@@ -11456,7 +11456,7 @@ int dasmfunc_c0(dasm_state *D, char *buf) {
 		return 5;
 	}
 	if(1 && op[3]==0x13) {
-		sprintf(buf, "TRB     %s[X1]", get_romtable_label((op[2]<<8)|op[1]));
+		sprintf(buf, "TBR     %s[X1]", get_romtable_label((op[2]<<8)|op[1]));
 		D->pc += 4;
 		return 4;
 	}
@@ -11922,7 +11922,7 @@ int dasmfunc_c1(dasm_state *D, char *buf) {
 		return 5;
 	}
 	if(1 && op[3]==0x13) {
-		sprintf(buf, "TRB     %s[X2]", get_romtable_label((op[2]<<8)|op[1]));
+		sprintf(buf, "TBR     %s[X2]", get_romtable_label((op[2]<<8)|op[1]));
 		D->pc += 4;
 		return 4;
 	}
@@ -12388,7 +12388,7 @@ int dasmfunc_c2(dasm_state *D, char *buf) {
 		return 3;
 	}
 	if(1 && op[1]==0x13) {
-		sprintf(buf, "TRB     [DP]");
+		sprintf(buf, "TBR     [DP]");
 		D->pc += 2;
 		return 2;
 	}
@@ -12854,7 +12854,7 @@ int dasmfunc_c3(dasm_state *D, char *buf) {
 		return 4;
 	}
 	if(1 && op[2]==0x13) {
-		sprintf(buf, "TRB     (%s-0%04xh)[USP]", get_ram_label(D->usp+((signed char)op[1]), 4), D->usp);
+		sprintf(buf, "TBR     (%s-0%04xh)[USP]", get_ram_label(D->usp+((signed char)op[1]), 4), D->usp);
 		D->pc += 3;
 		return 3;
 	}
@@ -13280,7 +13280,7 @@ int dasmfunc_c4(dasm_state *D, char *buf) {
 		return 4;
 	}
 	if(1 && op[2]==0x13) {
-		sprintf(buf, "TRB     off(%s)", get_ram_label(((D->lrb>>5)<<8)|op[1], 4));
+		sprintf(buf, "TBR     off(%s)", get_ram_label(((D->lrb>>5)<<8)|op[1], 4));
 		D->pc += 3;
 		return 3;
 	}
@@ -13746,7 +13746,7 @@ int dasmfunc_c5(dasm_state *D, char *buf) {
 		return 4;
 	}
 	if(1 && op[2]==0x13) {
-		sprintf(buf, "TRB     %s", get_ram_label(op[1], 2));
+		sprintf(buf, "TBR     %s", get_ram_label(op[1], 2));
 		D->pc += 3;
 		return 3;
 	}
