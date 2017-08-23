@@ -1,3 +1,5 @@
+#include <string.h>
+
 typedef unsigned char u8;
 
 struct symbol
