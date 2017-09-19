@@ -19,3 +19,6 @@ extern void do_vcal(unsigned n);
 
 static int _abs(int x) { return x<0? -x:x; }
 
+#define CODE_OFFSET	0x3c
+
+
